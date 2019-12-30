@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title> screen size</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #C9CFE3;
+        }
+
+        .common-test-block {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        label{
+            margin: 20px 0 10px;
+        }
+        input{
+            width: 140px;
+            height: 32px;
+            border-radius: 6px;
+            border: 1px solid #C9CFE3;
+            padding:0 20px ;
+            box-sizing: border-box;
+        }
+
+        .button {
+            width: 140px;
+            height: 32px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            outline: none;
+            border: none;
+            background: #213991;
+            cursor: pointer;
+            font-weight: 600;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<div class="common-test-block">
+    <h2>Определение размеров экрана</h2>
+    <form>
+        <label> Ширина экрана</label>
+        <input class="screen-width"/>
+        <label>Высота экрана</label>
+        <input class="screen-height"/>
+
+        <input class="button" type="button" value="СТАРТ"/>
+    </form>
+</div>
+
+<script>
+    const widthScreen = document.querySelector(".screen-width");
+    const heightScreen = document.querySelector(".screen-height");
+    const buttonStart = document.querySelector(".button");
+
+       let startСalculationSize = () =>{
+       widthScreen.value=screen.width+"px";
+       heightScreen.value=screen.height+"px";
+      };
+    buttonStart.addEventListener("click", startСalculationSize);
+</script>
+</body>
+</html>
